@@ -1,0 +1,13 @@
+<h1>All our flats</h1>
+<ul class="list-group d-flex justify-content-around container inline-block">
+  <% @flats.each do |flat|  %>
+  <div class="card" style="width: 18rem;">
+    <img src="url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')" class="card-img-top" alt="...">
+    <div class="card-body border">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <p class="card-text"><%= flat.description %></p>
+      <a <%= link_to "See details", flat_path(flat), class: "btn btn-primary"%></a>
+    </div>
+  </div>
+  <% end %>
+</ul>
